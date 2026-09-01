@@ -3,11 +3,10 @@
 Template-faithful project page for **ContextFlow: In-Context Flow Matching for
 Robot Manipulation**.
 
-This version preserves the original Bulma/Nerfies-style scaffold: the same hero,
-author and affiliation blocks, rounded publication buttons, teaser, centered
-section layout, result content, BibTeX block, footer, CDN dependencies, and
-lightweight JavaScript. Only paper content, assets, and minimal table/caption
-styles replace or extend the placeholders.
+This version preserves the original Bulma/Nerfies-style scaffold: the hero,
+author block, rounded publication controls, centered section layout, footer, CDN
+dependencies, and lightweight JavaScript. Paper-grounded content and minimal
+table/caption styles replace or extend the original placeholders.
 
 ## Local preview
 
@@ -23,7 +22,6 @@ python3 -m http.server 8000
 index.html                          template-faithful page content
 static/css/index.css                original styles plus minimal paper-content rules
 static/js/index.js                  original carousel, slider, and smooth-scroll setup
-static/images/teaser.png            paper motivation figure
 static/images/method.png            ContextFlow architecture
 static/images/results.png           ALOHA evaluation suites
 static/pdfs/contextflow-paper.pdf
