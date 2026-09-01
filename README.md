@@ -1,54 +1,38 @@
-# ContextFlow — Project Page
+# ContextFlow — Project Page (v2)
 
-Live site: **https://dingjiansw101.github.io/contextflow-page/**
+Template-faithful project page for **ContextFlow: In-Context Flow Matching for
+Robot Manipulation**.
 
-A lightweight, self-contained academic project page (Bulma + Font Awesome +
-Academicons via CDN — no build step). Edit the HTML directly and push; GitHub
-Pages redeploys automatically from the `main` branch.
-
-## Editing checklist (search the HTML for `TODO`)
-
-- [ ] **Title / subtitle** — `index.html` hero section.
-- [ ] **Authors & affiliations** — hero `publication-authors` blocks.
-- [ ] **Venue / year** — `publication-venue`.
-- [ ] **Buttons** — set the `href`s for Paper / arXiv / Video / Code / Data
-      (delete any you don't need).
-- [ ] **Abstract** — Abstract section.
-- [ ] **Figures** — drop files into `static/images/` and they replace the
-      dashed placeholders automatically:
-  - `static/images/teaser.png`
-  - `static/images/method.png`
-  - `static/images/results.png`
-- [ ] **Video** — paste a YouTube embed URL (commented `<iframe>` is ready) or
-      use a local `static/videos/*.mp4`.
-- [ ] **BibTeX** — BibTeX section.
-- [ ] **Social preview** — `og:image` / `og:url` meta tags in `<head>`.
+This version preserves the original Bulma/Nerfies-style scaffold: the same hero,
+author and affiliation blocks, rounded publication buttons, teaser, centered
+section layout, result content, BibTeX block, footer, CDN dependencies, and
+lightweight JavaScript. Only paper content, assets, and minimal table/caption
+styles replace or extend the placeholders.
 
 ## Local preview
 
 ```bash
-cd contextflow-page
+cd codex-v2
 python3 -m http.server 8000
 # open http://localhost:8000
 ```
 
-## Layout
+## Structure
 
+```text
+index.html                          template-faithful page content
+static/css/index.css                original styles plus minimal paper-content rules
+static/js/index.js                  original carousel, slider, and smooth-scroll setup
+static/images/teaser.png            paper motivation figure
+static/images/method.png            ContextFlow architecture
+static/images/results.png           ALOHA evaluation suites
+static/pdfs/contextflow-paper.pdf
+static/pdfs/contextflow-supplementary.pdf
 ```
-index.html              # the whole page
-static/css/index.css    # styles
-static/js/index.js      # carousel/slider init + smooth scroll
-static/images/          # figures (teaser, method, results, favicon)
-static/videos/          # local video files (optional)
-static/pdfs/            # paper / supplementary PDFs (optional)
-.nojekyll               # serve files as-is (skip Jekyll)
-```
 
-## Hosting notes
+The page has no build step. GitHub Pages serves the repository root directly,
+with `.nojekyll` keeping static assets untouched.
 
-- Published from the `main` branch, root (`/`).
-- On a **free** GitHub plan, Pages serves only while the repo is **public**.
-  Making the repo private takes the live page offline until it's public again
-  (Pro/Team/Enterprise can serve Pages from private repos).
-- Template inspired by the [Nerfies](https://github.com/nerfies/nerfies.github.io)
-  project page (CC BY-SA 4.0).
+The template is inspired by the
+[Nerfies project page](https://github.com/nerfies/nerfies.github.io)
+(CC BY-SA 4.0).

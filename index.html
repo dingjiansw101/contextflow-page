@@ -4,19 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- ============================================================= -->
-  <!-- TODO: replace the meta tags below with your real paper info.  -->
-  <!-- ============================================================= -->
-  <title>ContextFlow</title>
-  <meta name="description" content="ContextFlow project page. TODO: add a one-line description of the paper.">
-  <meta name="keywords" content="ContextFlow, in-context learning, vision-language-action, robot manipulation">
+  <title>ContextFlow: In-Context Flow Matching for Robot Manipulation</title>
+  <meta name="description" content="ContextFlow is a conditional flow-matching model for in-context robot imitation learning that predicts continuous action chunks from demonstrations without test-time fine-tuning.">
+  <meta name="keywords" content="ContextFlow, in-context learning, flow matching, robot manipulation, imitation learning, vision-language-action">
 
-  <!-- Open Graph / social preview (TODO: set image + url) -->
-  <meta property="og:title" content="ContextFlow">
-  <meta property="og:description" content="TODO: project tagline for social previews.">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="ContextFlow: In-Context Flow Matching for Robot Manipulation">
+  <meta property="og:description" content="Continuous robot control from in-context demonstrations, without test-time fine-tuning.">
+  <meta property="og:type" content="article">
   <meta property="og:image" content="static/images/teaser.png">
-  <!-- <meta property="og:url" content="https://dingjiansw101.github.io/contextflow-page/"> -->
+  <meta property="og:url" content="https://dingjiansw101.github.io/contextflow-page/">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="static/images/favicon.svg" type="image/svg+xml">
@@ -48,54 +44,41 @@
 
           <h1 class="title is-1 publication-title">ContextFlow</h1>
           <h2 class="subtitle is-4 publication-subtitle">
-            <!-- TODO: replace with your paper's subtitle / one-line summary -->
-            A Project Page Template &mdash; <span class="tag is-warning is-light">Content coming soon</span>
+            In-Context Flow Matching for Robot Manipulation
           </h2>
 
-          <!-- Authors (TODO: edit names + affiliation superscripts) -->
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><a href="#">Author One</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="#">Author Two</a><sup>1,2</sup>,</span>
-            <span class="author-block"><a href="#">Author Three</a><sup>2</sup></span>
+            <span class="author-block"><a href="https://orcid.org/0000-0002-7188-5884">Jian Ding</a><sup>1,*</sup>,</span>
+            <span class="author-block"><a href="https://orcid.org/0009-0006-2842-611X">Xianjie Dai</a><sup>1,*</sup>,</span>
+            <span class="author-block"><a href="https://orcid.org/0000-0002-5451-6059">Roei Herzig</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://orcid.org/0009-0004-4346-4208">Nussair Hroub</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://orcid.org/0000-0002-3396-1970">Jinjie Mai</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://orcid.org/0000-0001-5440-9678">Dengxin Dai</a><sup>3</sup>,</span>
+            <span class="author-block"><a href="https://orcid.org/0000-0002-5534-587X">Bernard Ghanem</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://orcid.org/0000-0001-9659-1551">Mohamed Elhoseiny</a><sup>1,†</sup></span>
           </div>
 
-          <!-- Affiliations (TODO) -->
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Affiliation One,</span>
-            <span class="author-block"><sup>2</sup>Affiliation Two</span>
+            <span class="author-block"><sup>1</sup>KAUST,</span>
+            <span class="author-block"><sup>2</sup>University of California, Berkeley,</span>
+            <span class="author-block"><sup>3</sup>Zurich, Switzerland</span>
           </div>
+          <div class="author-note">* Equal contribution. &nbsp; † Corresponding author.</div>
 
-          <!-- Venue (TODO) -->
           <div class="is-size-5 publication-venue">
-            <span class="venue-text">Venue / Year (e.g., ECCV 2026)</span>
+            <span class="venue-text">Preprint · 2026</span>
           </div>
 
-          <!-- Link buttons (TODO: set hrefs; remove any you don't need) -->
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                <a href="static/pdfs/contextflow-paper.pdf" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-youtube"></i></span><span>Video</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="far fa-images"></i></span><span>Data</span>
+                <a href="static/pdfs/contextflow-supplementary.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-lines"></i></span><span>Supplementary</span>
                 </a>
               </span>
             </div>
@@ -111,11 +94,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: drop your teaser into static/images/teaser.png -->
-      <img src="static/images/teaser.png" alt="ContextFlow teaser"
-           onerror="this.onerror=null;this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-box',innerHTML:'<span>TODO: teaser figure &rarr; static/images/teaser.png</span>'}))">
+      <img src="static/images/teaser.png" alt="Comparison of autoregressive action prediction and ContextFlow on seen and unseen robot task configurations">
       <h2 class="subtitle has-text-centered">
-        TODO: one-sentence caption describing the teaser figure.
+        ContextFlow predicts continuous action chunks in parallel, reducing compounding error under unseen task configurations compared with autoregressive action decoding.
       </h2>
     </div>
   </div>
@@ -129,13 +110,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            <strong>TODO:</strong> paste your abstract here. This is placeholder text so the
-            layout renders correctly. Replace it with a few sentences that motivate the problem,
-            state your key idea, and summarize the main result.
+            Although highly effective in vision and language domains, applying in-context learning to robotics remains challenging. Existing autoregressive in-context imitation methods discretize continuous actions and exacerbate the accumulation of early prediction errors through next-token prediction, limiting their generalization on unseen task configurations. Meanwhile, flow-matching policies have been explored for continuous robot control and can help mitigate compounding errors; however, in-context imitation learning within a flow-matching framework remains underexplored.
           </p>
           <p>
-            Keep it to one or two paragraphs &mdash; the project page abstract usually mirrors
-            the paper abstract.
+            We introduce <strong>ContextFlow</strong>, a conditional flow-matching model that learns continuous action distributions for in-context imitation learning. ContextFlow conditions flow-based action prediction on demonstrations and observations, enabling robust generation from noisy action distributions. Perceiver-style multimodal context compressors distill visual, proprioceptive, and action sequences into compact, task-relevant latent representations.
+          </p>
+          <p>
+            On LIBERO, ContextFlow outperforms ICRT by <strong>35 percentage points</strong> in average success rate on unseen task configurations, while matching the task-specific fine-tuned VLA model π<sub>0</sub> without any fine-tuning on unseen tasks. On real robots, it generalizes to unseen configurations of both single-arm and bimanual tasks, achieving <strong>40% success</strong> on a new pen-uncapping configuration.
           </p>
         </div>
       </div>
@@ -152,13 +133,17 @@
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered">Method</h2>
         <div class="content has-text-centered">
-          <img src="static/images/method.png" alt="Method overview"
-               onerror="this.onerror=null;this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-box',innerHTML:'<span>TODO: method figure &rarr; static/images/method.png</span>'}))">
+          <img src="static/images/method.png" alt="ContextFlow architecture with context compressors, a context expert, and a flow-matching action expert">
+          <p class="figure-caption">
+            <strong>ContextFlow architecture.</strong> Multimodal demonstrations are compressed into context tokens, while the action expert transforms noise into a continuous action chunk conditioned on the context and current observation.
+          </p>
         </div>
         <div class="content has-text-justified">
           <p>
-            <strong>TODO:</strong> describe your method here. Explain the architecture / approach
-            shown in the figure above and why it works.
+            ContextFlow models the conditional action distribution directly in continuous space. Given one in-context demonstration and the current observation, it initializes a noisy action chunk and refines the full chunk through ten conditional flow-matching updates. Unlike autoregressive policies, the model does not discretize actions or predict future controls token by token.
+          </p>
+          <p>
+            Long robot demonstrations contain substantial spatial and temporal redundancy. Separate perceiver-style compressors condense image, proprioceptive-state, and action streams into fixed-size latent sets. The context expert fuses these demonstration tokens with the task instruction and current images; the action expert then attends to that context while predicting a 50-step action horizon. Block-wise causal attention allows the context tokens to be cached during inference.
           </p>
         </div>
       </div>
@@ -174,38 +159,134 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered">Results</h2>
+
+        <h3 class="title is-4 has-text-centered results-subtitle">LIBERO Simulation</h3>
+        <div class="content has-text-justified">
+          <p>
+            Models are trained on seen tasks and evaluated on four unseen task configurations from LIBERO-Spatial and LIBERO-Object. Each task is evaluated over 50 trials. ContextFlow reaches <strong>73.5% average success</strong>, outperforming ICRT by 35 points and ContextAR by 20 points.
+          </p>
+        </div>
+
+        <div class="table-container results-table-wrap">
+          <table class="table is-striped is-hoverable is-fullwidth results-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Test-time adaptation</th>
+                <th class="has-text-centered">Spatial</th>
+                <th class="has-text-centered">Object</th>
+                <th class="has-text-centered">Average</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>OpenVLA-OFT</td>
+                <td>Text prompt</td>
+                <td class="has-text-centered">63.0</td>
+                <td class="has-text-centered">17.0</td>
+                <td class="has-text-centered">40.0</td>
+              </tr>
+              <tr>
+                <td>π<sub>0</sub></td>
+                <td>Text prompt</td>
+                <td class="has-text-centered">26.0</td>
+                <td class="has-text-centered">63.0</td>
+                <td class="has-text-centered">44.5</td>
+              </tr>
+              <tr>
+                <td>π<sub>0</sub> (FT)</td>
+                <td>1-demo fine-tuning</td>
+                <td class="has-text-centered">63.0</td>
+                <td class="has-text-centered">82.0</td>
+                <td class="has-text-centered">72.5</td>
+              </tr>
+              <tr>
+                <td>ICRT</td>
+                <td>1-demo context</td>
+                <td class="has-text-centered">27.0</td>
+                <td class="has-text-centered">50.0</td>
+                <td class="has-text-centered">38.5</td>
+              </tr>
+              <tr>
+                <td>ContextAR</td>
+                <td>1-demo context</td>
+                <td class="has-text-centered">53.0</td>
+                <td class="has-text-centered">54.0</td>
+                <td class="has-text-centered">53.5</td>
+              </tr>
+              <tr>
+                <td>ContextFlow-Plain</td>
+                <td>1-demo context</td>
+                <td class="has-text-centered">55.0</td>
+                <td class="has-text-centered">73.0</td>
+                <td class="has-text-centered">64.0</td>
+              </tr>
+              <tr class="has-background-info-light">
+                <td><strong>ContextFlow (Ours)</strong></td>
+                <td>1-demo context</td>
+                <td class="has-text-centered"><strong>64.0</strong></td>
+                <td class="has-text-centered"><strong>83.0</strong></td>
+                <td class="has-text-centered"><strong>73.5</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="result-note has-text-centered">
+          FT fine-tunes π<sub>0</sub> on one demonstration from each unseen task. ContextFlow uses the demonstration only as input and does not update its weights.
+        </p>
+
+        <h3 class="title is-4 has-text-centered results-subtitle">Real-World ALOHA Experiments</h3>
         <div class="content has-text-centered">
-          <img src="static/images/results.png" alt="Results"
-               onerror="this.onerror=null;this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-box',innerHTML:'<span>TODO: results figure/table &rarr; static/images/results.png</span>'}))">
+          <img src="static/images/results.png" alt="ALOHA evaluation suites with seen and unseen pick-and-place, pen-uncapping, and egg-in-box configurations">
+          <p class="figure-caption">
+            <strong>Real-world task suites.</strong> The evaluation covers unseen objects and left–right hand configurations for single-arm and fine-grained bimanual manipulation.
+          </p>
         </div>
         <div class="content has-text-justified">
           <p>
-            <strong>TODO:</strong> summarize quantitative and qualitative results. You can also
-            swap this block for a comparison table or an image carousel.
+            The real-world dataset contains 1,318 multimodal trajectories across 25 task configurations. ContextFlow succeeds on all six held-out configurations, including long-horizon bimanual tasks, while ICRT succeeds only on the pear pick-and-place task.
           </p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="table-container results-table-wrap">
+          <table class="table is-striped is-hoverable is-fullwidth results-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th class="has-text-centered">Pear</th>
+                <th class="has-text-centered">Orange</th>
+                <th class="has-text-centered">Banana</th>
+                <th class="has-text-centered">Kiwi</th>
+                <th class="has-text-centered">Red pen</th>
+                <th class="has-text-centered">Red egg</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ICRT</td>
+                <td class="has-text-centered">2/10</td>
+                <td class="has-text-centered">0/10</td>
+                <td class="has-text-centered">0/10</td>
+                <td class="has-text-centered">0/10</td>
+                <td class="has-text-centered">0/10</td>
+                <td class="has-text-centered">0/10</td>
+              </tr>
+              <tr class="has-background-info-light">
+                <td><strong>ContextFlow</strong></td>
+                <td class="has-text-centered"><strong>2/10</strong></td>
+                <td class="has-text-centered"><strong>5/10</strong></td>
+                <td class="has-text-centered"><strong>4/10</strong></td>
+                <td class="has-text-centered"><strong>4/10</strong></td>
+                <td class="has-text-centered"><strong>4/10</strong></td>
+                <td class="has-text-centered"><strong>6/10</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-<hr class="section-divider">
-
-<!-- ===================== VIDEO ===================== -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <!-- TODO: replace with your YouTube embed URL -->
-          <div class="placeholder-box video-placeholder">
-            <span>TODO: embed your video (YouTube iframe or static/videos/*.mp4)</span>
-          </div>
-          <!--
-          <iframe src="https://www.youtube.com/embed/XXXXXXXXXXX"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          -->
+        <div class="content has-text-justified result-summary">
+          <p>
+            Flow matching lowers cumulative trajectory MSE from 4.7 m² for ContextAR to 3.0 m² for ContextFlow-Plain. Multimodal context compression reduces it further to 2.2 m². Attention visualizations show that the image compressor follows task progress, shifting from the gripper to the manipulated object and finally to the placement target.
+          </p>
         </div>
       </div>
     </div>
@@ -218,11 +299,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title is-3">BibTeX</h2>
-    <pre><code>@article{contextflow,
-  title   = {ContextFlow: TODO full title},
-  author  = {TODO Author One and TODO Author Two and TODO Author Three},
-  journal = {TODO venue},
-  year    = {TODO year}
+    <pre><code>@article{ding2026contextflow,
+  title  = {ContextFlow: In-Context Flow Matching for Robot Manipulation},
+  author = {Ding, Jian and Dai, Xianjie and Herzig, Roei and Hroub, Nussair and Mai, Jinjie and Dai, Dengxin and Ghanem, Bernard and Elhoseiny, Mohamed},
+  year   = {2026},
+  note   = {Preprint}
 }</code></pre>
   </div>
 </section>

@@ -107,3 +107,65 @@ pre {
 
 .footer { padding: 2.5rem 1.5rem; background-color: #fafafa; }
 .footer a { color: #3273dc; }
+/* Paper-content additions that preserve the original template styling. */
+.author-note {
+  margin-top: 0.5rem;
+  color: #7a7a7a;
+  font-size: 0.8rem;
+}
+
+.figure-caption {
+  margin-top: 0.85rem;
+  color: #6b6b6b;
+  font-size: 0.9rem;
+}
+
+.results-subtitle {
+  margin-top: 3rem;
+}
+
+.results-table-wrap {
+  margin: 1.5rem 0 0.75rem;
+}
+
+.results-table {
+  min-width: 720px;
+  font-size: 0.9rem;
+}
+
+.results-table th,
+.results-table td {
+  vertical-align: middle;
+}
+
+.result-note {
+  color: #7a7a7a;
+  font-size: 0.8rem;
+}
+
+.result-summary {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  background: #fafafa;
+  border-left: 4px solid #3273dc;
+  border-radius: 4px;
+}
+
+#BibTeX pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 768px) {
+  .publication-title {
+    font-size: 2.5rem !important;
+  }
+
+  .publication-subtitle {
+    font-size: 1.25rem !important;
+  }
+
+  .hero-body {
+    padding: 2.25rem 1rem;
+  }
+}
