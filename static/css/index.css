@@ -151,10 +151,6 @@ pre {
   border-radius: 4px;
 }
 
-#BibTeX pre {
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-}
 
 @media screen and (max-width: 768px) {
   .publication-title {
