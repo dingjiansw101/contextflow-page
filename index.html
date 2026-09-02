@@ -121,11 +121,11 @@
         <h2 class="title is-3 has-text-centered">Method</h2>
         <div class="content has-text-centered">
           <img src="static/images/method.png" alt="ContextFlow architecture with context compressors, a context expert, and a flow-matching action expert">
-          <p class="figure-caption">
+          <p class="figure-caption container is-max-desktop">
             <strong>ContextFlow architecture.</strong> Multimodal demonstrations are compressed into context tokens, while the action expert transforms noise into a continuous action chunk conditioned on the context and current observation.
           </p>
         </div>
-        <div class="content has-text-justified">
+        <div class="container is-max-desktop content has-text-justified">
           <p>
             ContextFlow models the conditional action distribution directly in continuous space. Given one in-context demonstration and the current observation, it initializes a noisy action chunk and refines the full chunk through ten conditional flow-matching updates. Unlike autoregressive policies, the model does not discretize actions or predict future controls token by token.
           </p>
@@ -289,12 +289,12 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Video</h2>
         <div class="columns is-multiline">
-          <div class="column is-half">
+          <div class="column is-full">
             <div class="publication-video">
               <iframe src="https://drive.google.com/file/d/1z6rEqqimfcxQYh1DQmSAIGbsyqkzYY1G/preview" title="ContextFlow demonstration video 1" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy"></iframe>
             </div>
           </div>
-          <div class="column is-half">
+          <div class="column is-full">
             <div class="publication-video">
               <iframe src="https://drive.google.com/file/d/1exLYk6c9VtWXEljEsEU-YvMEBmu2sP9b/preview" title="ContextFlow demonstration video 2" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy"></iframe>
             </div>
