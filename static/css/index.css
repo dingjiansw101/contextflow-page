@@ -115,6 +115,21 @@ pre {
   font-size: 0.8rem;
 }
 
+.method-figure-frame {
+  position: relative;
+  aspect-ratio: 1433 / 497;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.method-figure-frame img {
+  position: absolute;
+  top: -50.3%;
+  left: -31.3%;
+  width: 162.8%;
+  max-width: none;
+}
+
 .figure-caption {
   margin-top: 0.85rem;
   color: #6b6b6b;
