@@ -159,15 +159,6 @@ pre {
   font-size: 0.8rem;
 }
 
-.result-summary {
-  margin-top: 2rem;
-  padding: 1.25rem;
-  background: #fafafa;
-  border-left: 4px solid #3273dc;
-  border-radius: 4px;
-}
-
-
 @media screen and (max-width: 768px) {
   .publication-title {
     font-size: 3rem !important;
