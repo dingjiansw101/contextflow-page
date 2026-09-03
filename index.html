@@ -92,11 +92,9 @@
 <!-- ===================== OVERVIEW FIGURE ===================== -->
 <section class="section overview-figure-section">
   <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Task Definition</h2>
     <figure class="content has-text-centered overview-figure">
       <img src="static/images/incontext.svg" alt="In-context imitation learning overview showing demonstrations prompting a model to predict actions from observations and roll out in the environment">
-      <figcaption class="figure-caption container is-max-desktop">
-        <strong>In-context imitation learning.</strong> One or a few demonstrations prompt the model to predict actions for a new configuration without updating its weights.
-      </figcaption>
     </figure>
   </div>
 </section>
@@ -106,7 +104,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3 has-text-centered">Motivation</h2>
         <div class="content has-text-justified">
           <p>
             In-context learning is an emergent capability of large language models (LLMs), which are typically formulated as autoregressive models. However, when applied to robot manipulation, autoregressive approaches often require discretizing continuous actions and can compound early prediction errors through sequential next-token prediction. In this work, we explore an alternative formulation of in-context imitation learning based on flow matching, which directly predicts continuous actions in parallel.
@@ -129,9 +127,6 @@
           <div class="method-figure-frame container is-max-desktop">
             <img src="static/images/method.png" alt="ContextFlow architecture with context compressors, a context expert, and a flow-matching action expert">
           </div>
-          <p class="figure-caption container is-max-desktop">
-            <strong>ContextFlow architecture.</strong> Multimodal demonstrations are compressed into context tokens, while the action expert transforms noise into a continuous action chunk conditioned on the context and current observation.
-          </p>
         </div>
         <div class="container is-max-desktop content has-text-justified">
           <p>
@@ -258,9 +253,6 @@
         <h3 class="title is-4 has-text-centered results-subtitle">Real-World ALOHA Experiments</h3>
         <div class="content has-text-centered">
           <img src="static/images/results.png" alt="ALOHA evaluation suites with seen and unseen pick-and-place, pen-uncapping, and egg-in-box configurations">
-          <p class="figure-caption">
-            <strong>Real-world task suites.</strong> The evaluation covers unseen objects and left–right hand configurations for single-arm and fine-grained bimanual manipulation.
-          </p>
         </div>
         <div class="content has-text-justified">
           <p>
