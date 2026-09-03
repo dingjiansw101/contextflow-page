@@ -8,15 +8,11 @@ body {
 .hero-body { padding: 3rem 1.5rem; }
 
 .publication-title {
-  font-size: 4rem;
+  font-size: clamp(2rem, 3.2vw, 4rem);
   font-family: 'Google Sans', 'Noto Sans', sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.5px;
-}
-
-.publication-subtitle {
-  color: #4a4a4a;
-  margin-top: 0.75rem;
+  white-space: nowrap;
 }
 
 .publication-authors {
@@ -176,11 +172,8 @@ pre {
 
 @media screen and (max-width: 768px) {
   .publication-title {
-    font-size: 3rem !important;
-  }
-
-  .publication-subtitle {
-    font-size: 1.25rem !important;
+    font-size: 2rem !important;
+    white-space: normal;
   }
 
   .hero-body {

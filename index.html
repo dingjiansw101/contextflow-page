@@ -37,14 +37,13 @@
 <!-- ===================== HERO / TITLE ===================== -->
 <section class="hero">
   <div class="hero-body">
-    <div class="container is-max-desktop">
+    <div class="container is-fluid">
       <div class="columns is-centered">
         <div class="column has-text-centered">
 
-          <h1 class="title is-1 publication-title">ContextFlow</h1>
-          <h2 class="subtitle is-4 publication-subtitle">
-            In-Context Flow Matching for Robot Manipulation
-          </h2>
+          <h1 class="title is-1 publication-title">
+            ContextFlow: In-Context Flow Matching for Robot Manipulation
+          </h1>
 
           <div class="is-size-6 publication-authors">
             <span class="author-block">Jian Ding<sup>*</sup>,</span>
@@ -93,6 +92,9 @@
 <section class="section overview-figure-section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Task Definition</h2>
+    <p class="content has-text-centered">
+      <strong>In-Context Imitation Learning:</strong> Learn the skill of an unseen task through an in-context demonstration immediately, without updating model weights.
+    </p>
     <figure class="content has-text-centered overview-figure">
       <img src="static/images/incontext.svg" alt="In-context imitation learning overview showing demonstrations prompting a model to predict actions from observations and roll out in the environment">
     </figure>
@@ -123,15 +125,15 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered">Method</h2>
-        <div class="content has-text-centered">
-          <div class="method-figure-frame container is-max-desktop">
-            <img src="static/images/method.png" alt="ContextFlow architecture with context compressors, a context expert, and a flow-matching action expert">
-          </div>
-        </div>
         <div class="container is-max-desktop content has-text-justified">
           <p>
             ContextFlow models the conditional action distribution directly in continuous space. Given one in-context demonstration and the current observation, it initializes a noisy action chunk and refines the full chunk through ten conditional flow-matching updates. Unlike autoregressive policies, the model does not discretize actions or predict future controls token by token. Perceiver-style compressors reduce redundant visual, proprioceptive, and action sequences to compact latent tokens. The context expert fuses them with the task instruction and current images, and the action expert predicts a 50-step action horizon. Block-wise causal attention enables context caching during inference.
           </p>
+        </div>
+        <div class="content has-text-centered">
+          <div class="method-figure-frame container is-max-desktop">
+            <img src="static/images/method.png" alt="ContextFlow architecture with context compressors, a context expert, and a flow-matching action expert">
+          </div>
         </div>
       </div>
     </div>
@@ -150,7 +152,7 @@
         <h3 class="title is-4 has-text-centered results-subtitle">LIBERO Simulation</h3>
         <div class="content has-text-justified">
           <p>
-            Models are trained on 32 seen tasks and evaluated on 4 unseen task configurations from LIBERO-Spatial and LIBERO-Object.
+            Models are trained on 32 seen tasks and evaluated on 4 unseen task configurations from LIBERO-Spatial and LIBERO-Object. FT means fine-tuning on unseen task configurations with one demonstration. ContextAR is our improved in-context autoregressive baseline for a fair comparison with ContextFlow.
           </p>
         </div>
 
@@ -246,10 +248,6 @@
             </tbody>
           </table>
         </div>
-        <p class="figure-caption has-text-justified">
-          <strong>Comparison of models on LIBERO simulation.</strong> FT means fine-tuning on unseen task configurations with one demonstration. ContextAR is our improved in-context autoregressive baseline for a fair comparison with ContextFlow.
-        </p>
-
         <h3 class="title is-4 has-text-centered results-subtitle">Real-World ALOHA Experiments</h3>
         <div class="content has-text-centered">
           <img src="static/images/results.png" alt="ALOHA evaluation suites with seen and unseen pick-and-place, pen-uncapping, and egg-in-box configurations">
@@ -333,11 +331,11 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Generalization under shifted demonstration</h2>
+    <p class="content has-text-justified">
+      <strong>Generalization of ContextFlow under distribution shifts from the in-context demonstration.</strong> The first row shows the in-context demonstration. The second row shows the rollout where the banana is placed at a different location and orientation. The third row shows the rollout where the banana is cut in half, introducing a novel object appearance.
+    </p>
     <figure class="content has-text-centered">
       <img src="static/images/ood.svg" alt="Out-of-distribution robot manipulation evaluation overview">
-      <figcaption class="figure-caption">
-        <strong>Generalization of ContextFlow under distribution shifts from the in-context demonstration.</strong> The first row shows the in-context demonstration. The second row shows the rollout where the banana is placed at a different location and orientation. The third row shows the rollout where the banana is cut in half, introducing a novel object appearance.
-      </figcaption>
     </figure>
   </div>
 </section>
