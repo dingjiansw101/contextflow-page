@@ -63,8 +63,7 @@ body {
 
 .overview-figure img {
   display: block;
-  width: 86%;
-  max-width: 1020px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
 }

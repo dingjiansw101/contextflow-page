@@ -91,7 +91,7 @@
 
 <!-- ===================== OVERVIEW FIGURE ===================== -->
 <section class="section overview-figure-section">
-  <div class="container is-widescreen">
+  <div class="container is-max-desktop">
     <figure class="content has-text-centered overview-figure">
       <img src="static/images/incontext.svg" alt="In-context imitation learning overview showing demonstrations prompting a model to predict actions from observations and roll out in the environment">
       <figcaption class="figure-caption container is-max-desktop">
@@ -105,7 +105,7 @@
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full-width">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -155,7 +155,7 @@
         <h3 class="title is-4 has-text-centered results-subtitle">LIBERO Simulation</h3>
         <div class="content has-text-justified">
           <p>
-            Models are trained on 32 seen tasks and evaluated on 4 unseen task configurations from LIBERO-Spatial and LIBERO-Object. 
+            Models are trained on 32 seen tasks and evaluated on 4 unseen task configurations from LIBERO-Spatial and LIBERO-Object.
           </p>
         </div>
 
@@ -163,68 +163,96 @@
           <table class="table is-striped is-hoverable is-fullwidth results-table">
             <thead>
               <tr>
-                <th>Model</th>
-                <th>Test-time adaptation</th>
-                <th class="has-text-centered">Spatial</th>
-                <th class="has-text-centered">Object</th>
-                <th class="has-text-centered">Average</th>
+                <th rowspan="2">Model</th>
+                <th class="has-text-centered" colspan="3">LIBERO-Spatial</th>
+                <th class="has-text-centered" colspan="3">LIBERO-Object</th>
+                <th class="has-text-centered" rowspan="2">Avg.</th>
+              </tr>
+              <tr>
+                <th class="has-text-centered">S<sub>1</sub></th>
+                <th class="has-text-centered">S<sub>2</sub></th>
+                <th class="has-text-centered">Avg.</th>
+                <th class="has-text-centered">O<sub>1</sub></th>
+                <th class="has-text-centered">O<sub>2</sub></th>
+                <th class="has-text-centered">Avg.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>OpenVLA-OFT</td>
-                <td>Text prompt</td>
+                <td class="has-text-centered"><strong>94.0</strong></td>
+                <td class="has-text-centered">32.0</td>
                 <td class="has-text-centered">63.0</td>
+                <td class="has-text-centered">0.0</td>
+                <td class="has-text-centered">34.0</td>
                 <td class="has-text-centered">17.0</td>
                 <td class="has-text-centered">40.0</td>
               </tr>
               <tr>
                 <td>π<sub>0</sub></td>
-                <td>Text prompt</td>
+                <td class="has-text-centered">52.0</td>
+                <td class="has-text-centered">0.0</td>
                 <td class="has-text-centered">26.0</td>
+                <td class="has-text-centered">46.0</td>
+                <td class="has-text-centered">80.0</td>
                 <td class="has-text-centered">63.0</td>
                 <td class="has-text-centered">44.5</td>
               </tr>
-              <tr>
-                <td>π<sub>0</sub> (FT)</td>
-                <td>1-demo fine-tuning</td>
+              <tr class="fine-tuned-row">
+                <td>π<sub>0</sub> FT</td>
+                <td class="has-text-centered">94.0</td>
+                <td class="has-text-centered">32.0</td>
                 <td class="has-text-centered">63.0</td>
+                <td class="has-text-centered">80.0</td>
+                <td class="has-text-centered">84.0</td>
                 <td class="has-text-centered">82.0</td>
                 <td class="has-text-centered">72.5</td>
               </tr>
               <tr>
-                <td>ICRT</td>
-                <td>1-demo context</td>
+                <td>ICRT (AR baseline)</td>
+                <td class="has-text-centered">54.0</td>
+                <td class="has-text-centered">0.0</td>
                 <td class="has-text-centered">27.0</td>
+                <td class="has-text-centered">4.0</td>
+                <td class="has-text-centered"><strong>96.0</strong></td>
                 <td class="has-text-centered">50.0</td>
                 <td class="has-text-centered">38.5</td>
               </tr>
               <tr>
-                <td>ContextAR</td>
-                <td>1-demo context</td>
+                <td>ContextAR (AR baseline<sup>+</sup>)</td>
+                <td class="has-text-centered"><strong>94.0</strong></td>
+                <td class="has-text-centered">12.0</td>
                 <td class="has-text-centered">53.0</td>
+                <td class="has-text-centered">16.0</td>
+                <td class="has-text-centered">92.0</td>
                 <td class="has-text-centered">54.0</td>
                 <td class="has-text-centered">53.5</td>
               </tr>
               <tr>
-                <td>ContextFlow-Plain</td>
-                <td>1-demo context</td>
+                <td>ContextFlow-Plain (Ours)</td>
+                <td class="has-text-centered">90.0</td>
+                <td class="has-text-centered">20.0</td>
                 <td class="has-text-centered">55.0</td>
+                <td class="has-text-centered"><strong>92.0</strong></td>
+                <td class="has-text-centered">54.0</td>
                 <td class="has-text-centered">73.0</td>
                 <td class="has-text-centered">64.0</td>
               </tr>
               <tr class="has-background-info-light">
                 <td><strong>ContextFlow (Ours)</strong></td>
-                <td>1-demo context</td>
+                <td class="has-text-centered">86.0</td>
+                <td class="has-text-centered"><strong>42.0</strong></td>
                 <td class="has-text-centered"><strong>64.0</strong></td>
+                <td class="has-text-centered">76.0</td>
+                <td class="has-text-centered">90.0</td>
                 <td class="has-text-centered"><strong>83.0</strong></td>
                 <td class="has-text-centered"><strong>73.5</strong></td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="result-note has-text-centered">
-          FT fine-tunes π<sub>0</sub> on one demonstration from each unseen task. ContextFlow uses the demonstration only as input and does not update its weights.
+        <p class="figure-caption has-text-justified">
+          <strong>Comparison of models on LIBERO simulation.</strong> FT means fine-tuning on unseen task configurations with one demonstration. ContextAR is our improved in-context autoregressive baseline for a fair comparison with ContextFlow.
         </p>
 
         <h3 class="title is-4 has-text-centered results-subtitle">Real-World ALOHA Experiments</h3>
@@ -304,6 +332,21 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===================== OOD FIGURE ===================== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Generalization under shifted demonstration</h2>
+    <figure class="content has-text-centered">
+      <img src="static/images/ood.svg" alt="Out-of-distribution robot manipulation evaluation overview">
+      <figcaption class="figure-caption">
+        <strong>Generalization of ContextFlow under distribution shifts from the in-context demonstration.</strong> The first row shows the in-context demonstration. The second row shows the rollout where the banana is placed at a different location and orientation. The third row shows the rollout where the banana is cut in half, introducing a novel object appearance.
+      </figcaption>
+    </figure>
   </div>
 </section>
 
