@@ -53,6 +53,22 @@ body {
 }
 .teaser .subtitle { margin-top: 1rem; color: #4a4a4a; }
 
+.overview-figure-section {
+  padding-top: 0;
+}
+
+.overview-figure {
+  margin: 0;
+}
+
+.overview-figure img {
+  display: block;
+  width: 86%;
+  max-width: 1020px;
+  height: auto;
+  margin: 0 auto;
+}
+
 .section-divider {
   background-color: #ededed;
   height: 1px;

@@ -89,6 +89,18 @@
   </div>
 </section>
 
+<!-- ===================== OVERVIEW FIGURE ===================== -->
+<section class="section overview-figure-section">
+  <div class="container is-widescreen">
+    <figure class="content has-text-centered overview-figure">
+      <img src="static/images/incontext.svg" alt="In-context imitation learning overview showing demonstrations prompting a model to predict actions from observations and roll out in the environment">
+      <figcaption class="figure-caption container is-max-desktop">
+        <strong>In-context imitation learning.</strong> One or a few demonstrations prompt the model to predict actions for a new configuration without updating its weights.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
 <!-- ===================== ABSTRACT ===================== -->
 <section class="section">
   <div class="container is-max-desktop">
@@ -97,13 +109,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Although highly effective in vision and language domains, applying in-context learning to robotics remains challenging. Existing autoregressive in-context imitation methods discretize continuous actions and exacerbate the accumulation of early prediction errors through next-token prediction, limiting their generalization on unseen task configurations. Meanwhile, flow-matching policies have been explored for continuous robot control and can help mitigate compounding errors; however, in-context imitation learning within a flow-matching framework remains underexplored.
-          </p>
-          <p>
-            We introduce <strong>ContextFlow</strong>, a conditional flow-matching model that learns continuous action distributions for in-context imitation learning. ContextFlow conditions flow-based action prediction on demonstrations and observations, enabling robust generation from noisy action distributions. Perceiver-style multimodal context compressors distill visual, proprioceptive, and action sequences into compact, task-relevant latent representations.
-          </p>
-          <p>
-            On LIBERO, ContextFlow outperforms ICRT by <strong>35 percentage points</strong> in average success rate on unseen task configurations, while matching the task-specific fine-tuned VLA model π<sub>0</sub> without any fine-tuning on unseen tasks. On real robots, it generalizes to unseen configurations of both single-arm and bimanual tasks, achieving <strong>40% success</strong> on a new pen-uncapping configuration.
+            In-context learning is an emergent capability of large language models (LLMs), which are typically formulated as autoregressive models. However, when applied to robot manipulation, autoregressive approaches often require discretizing continuous actions and can compound early prediction errors through sequential next-token prediction. In this work, we explore an alternative formulation of in-context imitation learning based on flow matching, which directly predicts continuous actions in parallel.
           </p>
         </div>
       </div>
@@ -129,10 +135,7 @@
         </div>
         <div class="container is-max-desktop content has-text-justified">
           <p>
-            ContextFlow models the conditional action distribution directly in continuous space. Given one in-context demonstration and the current observation, it initializes a noisy action chunk and refines the full chunk through ten conditional flow-matching updates. Unlike autoregressive policies, the model does not discretize actions or predict future controls token by token.
-          </p>
-          <p>
-            Long robot demonstrations contain substantial spatial and temporal redundancy. Separate perceiver-style compressors condense image, proprioceptive-state, and action streams into fixed-size latent sets. The context expert fuses these demonstration tokens with the task instruction and current images; the action expert then attends to that context while predicting a 50-step action horizon. Block-wise causal attention allows the context tokens to be cached during inference.
+            ContextFlow models the conditional action distribution directly in continuous space. Given one in-context demonstration and the current observation, it initializes a noisy action chunk and refines the full chunk through ten conditional flow-matching updates. Unlike autoregressive policies, the model does not discretize actions or predict future controls token by token. Perceiver-style compressors reduce redundant visual, proprioceptive, and action sequences to compact latent tokens. The context expert fuses them with the task instruction and current images, and the action expert predicts a 50-step action horizon. Block-wise causal attention enables context caching during inference.
           </p>
         </div>
       </div>
@@ -152,7 +155,7 @@
         <h3 class="title is-4 has-text-centered results-subtitle">LIBERO Simulation</h3>
         <div class="content has-text-justified">
           <p>
-            Models are trained on seen tasks and evaluated on four unseen task configurations from LIBERO-Spatial and LIBERO-Object. Each task is evaluated over 50 trials. ContextFlow reaches <strong>73.5% average success</strong>, outperforming ICRT by 35 points and ContextAR by 20 points.
+            Models are trained on 32 seen tasks and evaluated on 4 unseen task configurations from LIBERO-Spatial and LIBERO-Object. 
           </p>
         </div>
 
@@ -233,7 +236,7 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            The real-world dataset contains 1,318 multimodal trajectories across 25 task configurations. ContextFlow succeeds on all six held-out configurations, including long-horizon bimanual tasks, while ICRT succeeds only on the pear pick-and-place task.
+            The real-world dataset contains 25 seen task configurations (including both single-arm and bimanual tasks), and tested on 6 unseen task configurations.
           </p>
         </div>
         <div class="table-container results-table-wrap">
@@ -288,13 +291,15 @@
         <div class="columns is-multiline">
           <div class="column is-full">
             <div class="publication-video">
-              <iframe src="https://drive.google.com/file/d/1z6rEqqimfcxQYh1DQmSAIGbsyqkzYY1G/preview" title="ContextFlow demonstration video 1" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1z6rEqqimfcxQYh1DQmSAIGbsyqkzYY1G/preview" title="Put the red egg in the box and close the box" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy"></iframe>
             </div>
+            <p class="figure-caption"><strong>Red egg manipulation.</strong> Put the red egg in the box and close the box.</p>
           </div>
           <div class="column is-full">
             <div class="publication-video">
-              <iframe src="https://drive.google.com/file/d/1exLYk6c9VtWXEljEsEU-YvMEBmu2sP9b/preview" title="ContextFlow demonstration video 2" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1exLYk6c9VtWXEljEsEU-YvMEBmu2sP9b/preview" title="Pick up the red pen with the left hand and uncap it" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy"></iframe>
             </div>
+            <p class="figure-caption"><strong>Red pen manipulation.</strong> Pick up the red pen with the left hand and uncap it.</p>
           </div>
         </div>
       </div>
